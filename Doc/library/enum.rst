@@ -1374,6 +1374,6 @@ bits are handled: ``STRICT``, ``CONFORM``, ``EJECT``, and ``KEEP``:
            - extra bits do not show up in iteration
            - extra bits do show up in repr() and str()
 
-The default for Flag is ``STRICT``, the default for ``IntFlag`` is ``DISCARD``,
+The default for Flag is ``STRICT``, the default for ``IntFlag`` is ``EJECT``,
 and the default for ``_convert_`` is ``KEEP`` (see ``ssl.Options`` for an
 example of when ``KEEP`` is needed).
