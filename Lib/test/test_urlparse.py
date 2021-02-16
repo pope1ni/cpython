@@ -121,7 +121,7 @@ class UrlParseTestCase(unittest.TestCase):
         self.assertEqual(result3.hostname, result.hostname)
         self.assertEqual(result3.port,     result.port)
 
-    def test_qsl(self):
+    def test_parse_qsl(self):
         for orig, expect in parse_qsl_test_cases:
             result = urllib.parse.parse_qsl(orig, keep_blank_values=True)
             self.assertEqual(result, expect, "Error parsing %r" % orig)
@@ -130,7 +130,7 @@ class UrlParseTestCase(unittest.TestCase):
             self.assertEqual(result, expect_without_blanks,
                             "Error parsing %r" % orig)
 
-    def test_qs(self):
+    def test_parse_qs(self):
         for orig, expect in parse_qs_test_cases:
             result = urllib.parse.parse_qs(orig, keep_blank_values=True)
             self.assertEqual(result, expect, "Error parsing %r" % orig)
